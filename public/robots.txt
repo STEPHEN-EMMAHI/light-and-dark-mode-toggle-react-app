@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://light-and-dark-mode-toggle-react-ap.vercel.app/
