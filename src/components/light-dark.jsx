@@ -32,9 +32,17 @@ function LightDarkToggle() {
   }
 
   return (
-    <main>
+    <main className="flex flex-col gap-4">
+      <h2
+        className={`text-center text-2xl font-bold ${color === "dark" ? "text-white" : "text-black"}`}
+      >
+        Appearance
+      </h2>
+
+      {/* outer modes container */}
       <div className="border-gray-200 rounded-full p-2 ring-2 ring-gray-200">
-        <div className="flex gap-8 bg-gray-200 p-4 rounded-full">
+        {/*inner modes-container */}
+        <div className="flex bg-gray-200 p-4 rounded-full justify-around">
           {/* lightMode */}
           <button
             aria-label="lightMode"
@@ -94,6 +102,12 @@ function LightDarkToggle() {
           </button>
         </div>
       </div>
+      {/* statement */}
+      <p
+        className={`text-center text-sm ${color === "dark" ? "text-white" : "text-black"}`}
+      >
+        Toggle To Switch Mode
+      </p>
     </main>
   );
 }
